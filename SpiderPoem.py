@@ -80,7 +80,7 @@ def do_parse_poem_page(poem_detail_url):
 
     # 处理主题
     shangxi = ''
-    fenxi_siblings = container[3].fetchNextSiblings()
+    fenxi_siblings = container[1].fetchNextSiblings()
     for item in fenxi_siblings:
         if item.get('id') != None and item.get('id').startswith('shangxi'):
             shangxi_id = re.sub("\D", "", item.attrs['id'])
